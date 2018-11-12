@@ -3,12 +3,15 @@
 namespace Backpack\PermissionManager\app\Http\Controllers;
 
 use Backpack\CRUD\app\Http\Controllers\CrudController;
+use Backpack\CRUD\app\Http\Controllers\Traits\EnhancedCrudController;
 use Backpack\PermissionManager\app\Http\Requests\UserStoreCrudRequest as StoreRequest;
 use Backpack\PermissionManager\app\Http\Requests\UserUpdateCrudRequest as UpdateRequest;
 use Illuminate\Http\Request;
 
 class UserCrudController extends CrudController
 {
+    use EnhancedCrudController;
+
     public function setup()
     {
         /*

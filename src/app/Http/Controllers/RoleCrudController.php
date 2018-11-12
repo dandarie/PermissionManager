@@ -4,11 +4,14 @@ namespace Backpack\PermissionManager\app\Http\Controllers;
 
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 // VALIDATION
+use Backpack\CRUD\app\Http\Controllers\Traits\EnhancedCrudController;
 use Backpack\PermissionManager\app\Http\Requests\RoleCrudRequest as StoreRequest;
 use Backpack\PermissionManager\app\Http\Requests\RoleCrudRequest as UpdateRequest;
 
 class RoleCrudController extends CrudController
 {
+    use EnhancedCrudController;
+
     public function setup()
     {
         $role_model = config('permission.models.role');
